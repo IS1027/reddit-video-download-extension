@@ -1,4 +1,11 @@
-let ogVideo = document.querySelector('meta[property="og:video"]');
+if (typeof ogVideo == "undefined") {
+    console.log("Entro? 1");
+    var ogVideo = document.querySelector('meta[property="og:video"]');
+}
+// El if funciona
+
+console.log("ogVideo!!!!!" + ogVideo + typeof(ogVideo));
+
 if(ogVideo) {
     let contentValue = ogVideo.getAttribute("content");
     let subString = contentValue.substring(0, contentValue.indexOf("/", contentValue.indexOf("/", contentValue.indexOf("/", contentValue.indexOf("/") + 1) + 1) + 1));
